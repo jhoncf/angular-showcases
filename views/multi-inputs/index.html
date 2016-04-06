@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="page-header">
+            <h3>Exemplo de multiplos inputs com validação</h3>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <button class="btn btn-default" ng-click="addRow()">Add Row</button>
+        <br>
+        <br>
+
+    </div>
+</div>
+<div class="row" ng-repeat="item in items">
+<form autocomplete="off">
+    <ng-form name="form" class="form-inline" >
+        <div class="col-md-5">
+            <div class="form-group" ng-class="{'has-error' : form.name.$invalid}">
+                <label for="exampleInputEmail1">Name</label>
+                <input type="text" class="form-control" name="name" ng-model="item.name" required>
+            </div>
+            <div class="form-group" ng-class="{'has-error' : form.url.$invalid}">
+                <label for="exampleInputEmail1">URL</label>
+                <input type="url" class="form-control" name="url" ng-model="item.url"/>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <button class="btn btn-default" ng-click="moveUp(items, $index)"><i class="glyphicon glyphicon-arrow-up"></i></button>
+            <button class="btn btn-default" ng-click="moveDown(items, $index)"><i class="glyphicon glyphicon-arrow-down"></i></button>
+            <button class="btn btn-default" ng-click="removeItem(items, $index)"><i class="glyphicon glyphicon-trash"></i></button>
+        </div>
+    </ng-form>
+</form>
+
+</div>
+
+<br>
+{{items | json}}
+
+<div ng-controller="Teste"></div>

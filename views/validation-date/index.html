@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="page-header">
+            <h3>Exemplo de inputs com validação de data</h3>
+        </div>
+    </div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<form autocomplete="off">
+		    <ng-form name="form" class="form-inline" >
+		        <div class="col-md-5">
+		            <div class="form-group" ng-class="{'has-error' : form.name.$invalid}">
+		                <label for="exampleInputEmail1">Data</label>
+		                <input type="text" class="form-control" name="date" ng-model="date" validate-date="" required>
+		            </div>
+		        </div>
+		        <div class="col-md-7">
+		            <button class="btn btn-default" ng-click="save()"><i class=""></i>Salvar</button>
+		        </div>
+		    </ng-form>
+		</form>
+	</div>
+</div>
+
+<div class="row">
+</div>
